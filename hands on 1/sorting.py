@@ -33,7 +33,7 @@ def bubble_sort(arr):
                 
 # Laptop Benchmarks
 def laptop_benchmarks():
-    print("\n=== Laptop Benchmarks ===")
+    print("\nLaptop Benchmarks")
     # CPU Usage
     cpu_usage = psutil.cpu_percent(interval=1)
     print(f"CPU Usage: {cpu_usage}%")
@@ -72,15 +72,15 @@ def benchmark_sorting_algorithm(algorithm, sizes):
         times.append(end - start)
     return times
 
-# Input Sizes
+# Input Sizes random function
 sizes = [random.randint(5, 10000) for _ in range(5)] 
 
-# Run Benchmarks
+# Running Benchmarks
 insertion_times = benchmark_sorting_algorithm(insertion_sort, sizes)
 selection_times = benchmark_sorting_algorithm(selection_sort, sizes)
 bubble_times = benchmark_sorting_algorithm(bubble_sort, sizes)
 
-# Plotting the Results
+# Plotting the graph
 plt.plot(sizes, insertion_times, label="Insertion Sort", marker='o')
 plt.plot(sizes, selection_times, label="Selection Sort", marker='o')
 plt.plot(sizes, bubble_times, label="Bubble Sort", marker='o')
